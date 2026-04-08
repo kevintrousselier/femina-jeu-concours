@@ -143,8 +143,7 @@ function splitLine(line) {
 }
 
 function parseCSV(txt) {
-  var lines = txt.trim().split("
-");
+  var lines = txt.trim().split(/\r?\n/);
   var out   = [];
   for (var i=1; i<lines.length; i++) {
     var cols   = splitLine(lines[i]);
